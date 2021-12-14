@@ -1,0 +1,257 @@
+*{
+   box-sizing: border-box;
+}
+html{
+   scroll-behavior: smooth;
+}
+/* Estilos gemerales */
+body{
+   font-family: 'Roboto', sans-serif;
+   margin: 0;
+}
+
+h1{font-size: 3.5em;}
+h2{font-size: 2.5em;}
+h3{font-size: 2em;}
+p{font-size: 1.20em;}
+ul{list-style: none;}
+li{font-size: 1.25em;}
+
+button{
+   font-size: 1.25em;
+   font-weight: bold;
+   padding: 10px 40px;
+   color: aliceblue;
+   background-color: blueviolet;
+   border-radius: 10px;
+   border: 2px solid rgba(0, 0, 0, 0.5);
+   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+}
+button:hover{
+   background-color: rgb(113, 30, 190);
+}
+.color-acento{
+   color: blueviolet;
+}
+
+/* Estilos del header */
+
+header{
+   background-color: rgb(245, 245, 245);
+   box-shadow: 0px 7px 17px -6px rgba(0,0,0,0.75);
+   -webkit-box-shadow: 0px 7px 17px -6px rgba(0,0,0,0.75);
+   -moz-box-shadow: 0px 7px 17px -6px rgba(0,0,0,0.75);
+}
+.container{
+   max-width: 1100px;
+   margin: auto;
+}
+
+
+header .logo{
+   margin: 0;
+   padding: 25px;
+   font-size: 1.7em;
+   font-weight: bold;
+   color: blueviolet;
+}
+
+header .container{
+   display: flex;
+   flex-direction:column;
+   align-items: center;
+}
+header nav{
+   display: flex;
+   flex-direction: column;
+   text-align: center;
+   padding-bottom: 25px;
+}
+header a{
+   padding: 5px 12px;
+   text-decoration: none;
+   font-weight: bold;
+   color: black;
+}
+header a:hover{
+   color: blueviolet;
+}
+
+/* seccion del hero */
+#hero {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   text-align: center;
+   height: 90vh;
+   justify-content: center;
+   color: aliceblue;
+   background-image: linear-gradient(0deg, rgba(0,0,0,0.5), rgba(0,0,0,0.5)),url(./assets/coding.jpg);
+   background-size: cover;
+   background-position: center;
+   background-repeat: no-repeat;
+
+}
+
+/* seccion de somos programaYa */
+#somos-progra .container{
+   text-align: center;
+   padding: 200px 12px;
+}
+
+/* seccion de nuestro programas */
+
+#nuestros-programas{
+   background-color: rgb(30,30,30);
+   color: aliceblue;
+   text-align: center;
+}
+#nuestros-programas .carta{
+   background-position: center;
+   padding: 50px 0;
+   margin: 30px;
+   border-radius: 12px;
+   background-size: cover;
+}
+#nuestros-programas .container{
+   padding: 150px 12px;
+}
+#nuestros-programas h2{
+   margin-top: 0;
+}
+#nuestros-programas p{
+   display: none;
+}
+.carta:first-child{
+   background-image: linear-gradient(0deg, rgba(0,0,0,0.5), rgba(0,0,0,0.5)),url(./assets/image1.jpg);
+}
+.carta:nth-child(2){
+   background-image: linear-gradient(0deg, rgba(0,0,0,0.5), rgba(0,0,0,0.5)),url(./assets/image2.jpg);
+}
+.carta:nth-child(3){
+   background-image: linear-gradient(0deg, rgba(0,0,0,0.5), rgba(0,0,0,0.5)),url(./assets/image3.jpg);
+}
+
+/* estilos de la seccion de caracteristi */
+#caracteristicas .container{
+   text-align: center;
+   padding: 200px 0;
+}
+#caracteristicas li{
+   margin: 15px 0;
+
+}
+
+/* estilos de la seccion de listo para progrmar */
+#aplica-ya{
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   text-align: center;
+   background: #a8c0ff;  /* fallback for old browsers */
+   background: -webkit-linear-gradient(to right, #3f2b96, #a8c0ff);  /* Chrome 10-25, Safari 5.1-6 */
+   background: linear-gradient(to right, #3f2b96, #a8c0ff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+   color: aliceblue;
+   height: 80vh;
+}
+#aplica-ya h2{
+   font-size: 9vw;
+   font-family: 'Sacramento', cursive;
+}
+footer{
+   background-color: rgb(230, 230, 230);
+   
+}
+footer p{
+   margin: 0;
+   padding: 12px;
+   color: rgb(100, 100, 100);
+}
+footer .container{
+   height: 10vh;
+   display: flex;
+   justify-content: center;
+   text-align: center;
+   align-items:flex-end;
+}
+
+
+
+/* diseño para pantallas mas grandes : Diseño Escritorio */
+@media (min-width: 720px){
+   header{
+      position: fixed;
+      width: 100%;
+   }
+   header .container{
+      flex-direction: row;
+      justify-content: space-between;
+      
+   }
+
+   header nav{
+      flex-direction: row;
+      padding: 0;
+      padding-right: 20px;
+   }
+
+   /* somos.progra */
+
+   #somos-progra .container{
+      display: flex;
+      flex-direction: row;
+      justify-content:space-evenly;
+   }
+   #somos-progra .img-container{
+      background-image: url(./assets/aprende.jpg);
+      background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat;
+      width: 400px;
+      height: 500px;
+   }
+   #somos-progra .texto{
+      text-align: initial;
+      width: 50%;
+      max-width: 600px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin-left:10px;
+   }
+
+
+   /* nuestros programas */
+
+   #nuestros-programas .cursos-carta{
+      display: flex;
+      justify-content: center;
+
+   }
+
+   #nuestros-programas p{
+      display: block;
+      margin-bottom: 30px;
+   }
+   #nuestros-programas h3{
+      margin-top: 0;
+   }
+   #nuestros-programas .carta{
+      padding: 50px;
+      box-shadow: 9px 11px 17px -6px rgba(0, 0, 0, 0.75);
+      -webkit-box-shadow: 9px 11px 17px -6px rgba(0, 0, 0, 0.75);
+      -moz-box-shadow: 9px 11px 17px -6px rgba(0, 0, 0, 0.75);
+   }
+
+   #aplica-ya h2{
+      font-size: 5em;;
+   }
+
+   footer .container{
+      display: flex;
+      justify-content:flex-end;
+   }
+
+}
